@@ -1,10 +1,16 @@
+import React from "react";
+import { ToastProvider } from "./context/ToastContext";
+import Navbar from "./components/ui/Navbar";
+import Workspace from "./pages/Workspace";
+
 function App() {
   return (
-    <div className="h-screen bg-black text-white flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-green-400">
-        Speech To Text App
-      </h1>
-    </div>
+    <ToastProvider>
+      <div className="min-h-screen bg-slate-950 text-white">
+        <Navbar />
+        <Workspace />
+      </div>
+    </ToastProvider>
   );
 }
 
